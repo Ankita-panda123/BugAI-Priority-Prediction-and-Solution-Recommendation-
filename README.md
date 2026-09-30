@@ -1,5 +1,5 @@
 # BugAI-Priority-Prediction-and-Solution-Recommendation-
-# BugAI - Bug Priority Prediction and Solution Recommendation System
+
 
 BugAI is a machine learning based web application developed to analyze software bug descriptions and predict their severity and priority. The system also provides possible solutions for the reported bug using a combination of rule-based recommendations and a locally running AI model.
 
