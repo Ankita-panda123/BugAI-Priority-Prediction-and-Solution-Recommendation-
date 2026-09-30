@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BugAI Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="dashboard">
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h1>🚀 BugAI</h1>
+    <p>AI-powered Bug Priority Prediction & Solution Recommendation</p>
+</div>
+
+<!-- MAIN DASHBOARD -->
+<div class="dashboard-container">
+
+    <!-- ================= LEFT PANEL ================= -->
+    <div class="left-panel glass-container">
+
+        <h2 class="heading">Analyze Your Bug</h2>
+
+        <!-- INPUT -->
+        <textarea id="desc" placeholder="Describe the bug in detail..."></textarea>
+
+        <!-- BUTTONS -->
+        <div class="btn-group">
+            <button onclick="predictBug()" class="predict-btn">
+                Analyze ⚡
+            </button>
+
+            <button onclick="clearText()" class="clear-btn">
+                Clear
+            </button>
+        </div>
+
+        <!-- LOADER -->
+        <div id="loader" class="loader">⏳ AI is analyzing...</div>
+
+        <!-- PRIORITY COUNTER -->
+        <div class="cards">
+            <div class="card P1">🔥 P1 <span id="p1">0</span></div>
+            <div class="card P2">⚠️ P2 <span id="p2">0</span></div>
+            <div class="card P3">✅ P3 <span id="p3">0</span></div>
+            <div class="card P4">📌 P4 <span id="p4">0</span></div>
+        </div>
+
+    </div>
+
+    <!-- ================= RIGHT PANEL ================= -->
+    <div class="right-panel">
+
+        <!-- RESULT (TOP PRIORITY INFO) -->
+        <div id="result"></div>
+
+        <!-- ALERTS -->
+        <div id="alerts"></div>
+
+        <!--SOLUTION -->
+        <h3 class="solutions-heading">Recommended Solution</h3>
+        <div id="solutions"></div>
+
+    </div>
+
+</div>
+
+<!--CURSOR LIGHT EFFECT -->
+<div id="cursor-light"></div>
+
+<!-- SCRIPT -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

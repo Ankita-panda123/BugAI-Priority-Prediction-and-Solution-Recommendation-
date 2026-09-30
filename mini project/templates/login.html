@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BugAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="welcome">
+<div class="bg-animation"></div>    
+
+<div class="hero">
+
+    <h1 class="title">
+        🐞 BugAI
+    </h1>
+
+    <p class="subtitle">
+        Smart Bug Priority Prediction using AI
+    </p>
+
+    <button class="enter-btn" onclick="go()">
+        Enter Dashboard →
+    </button>
+
+</div>
+
+<script>
+function go(){
+    document.body.classList.add("fade-out");
+    setTimeout(() => {
+        window.location.href = "/dashboard";
+    }, 600);
+}
+</script>
+
+</body>
+</html>
